@@ -37,7 +37,7 @@ class JsonFileArgumentsProviderTest {
     }
 
     /**
-     * When passed <code>[{"key":"value1"},{"key","value2"]}</code>, is
+     * When passed <code>[{"key":"value1"},{"key","value2"}]</code>, is
      * executed once per element of the array
      * @param object the parsed JsonObject array element
      */
@@ -49,7 +49,7 @@ class JsonFileArgumentsProviderTest {
     }
 
     /**
-     * When passed <code>[1, 2]}</code>, is executed once per array element
+     * When passed <code>[1, 2]</code>, is executed once per array element
      * @param number the parsed JsonNumber for each array element
      */
     @ParameterizedTest
@@ -60,7 +60,7 @@ class JsonFileArgumentsProviderTest {
     }
 
     /**
-     * When passed <code>["value1","value2"}</code>, is executed once per array
+     * When passed <code>["value1","value2"]</code>, is executed once per array
      * element
      * @param string the parsed JsonString for each array element
      */

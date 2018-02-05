@@ -8,6 +8,30 @@
     <artifactId>junit-javax.json</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>junit-javax.json</name>
+    <description>A Junit 5 library to load data from JSON files in parameterized tests</description>
+    <url>http://www.joshka.net/junit-javax-json/</url>
+    <inceptionYear>2018</inceptionYear>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/joshka/junit-javax-json.git</connection>
+        <developerConnection>scm:git:https://github.com/joshka/junit-javax-json.git</developerConnection>
+        <url>https://github.com/joshka/junit-javax-json/</url>
+        <tag>HEAD</tag>
+    </scm>
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/joshka/junit-javax-json/issues</url>
+    </issueManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>

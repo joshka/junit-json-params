@@ -7,8 +7,9 @@
     <groupId>net.joshka</groupId>
     <artifactId>junit-javax.json</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-    <name>junit-javax.json</name>
+    <name>${project.groupId}:${project.artifactId}</name>
     <description>A Junit 5 library to load data from JSON files in parameterized tests</description>
     <url>http://www.joshka.net/junit-javax-json/</url>
     <inceptionYear>2018</inceptionYear>
@@ -20,6 +21,14 @@
             <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
+
+    <developers>
+        <developer>
+            <id>joshka</id>
+            <name>Josh McKinney</name>
+            <url>http://www.joshka.net</url>
+        </developer>
+    </developers>
 
     <scm>
         <connection>scm:git:https://github.com/joshka/junit-javax-json.git</connection>

@@ -4,6 +4,9 @@ A [Junit 5](http://junit.org/junit5/) library to provide a `@JsonFileSource`
 annotation to load data from JSON files in parameterized tests. Internally uses the
 [javax.json](https://javaee.github.io/jsonp/) library
 
+## Documentation
+[Javadocs](apidocs/index.html)
+
 ## Examples
 
 ```java

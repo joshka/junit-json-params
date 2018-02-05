@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"net.joshka.junit.javax.json","l":"JsonFileArgumentsProvider"},{"p":"net.joshka.junit.javax.json","l":"JsonFileSource"}]

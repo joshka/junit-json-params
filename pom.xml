@@ -55,9 +55,11 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <junit.platform.version>1.0.3</junit.platform.version>
-        <junit.jupiter.version>5.0.3</junit.jupiter.version>
+        <maven.surefire.version>2.21.0</maven.surefire.version>
+        <junit.platform.version>1.2.0</junit.platform.version>
+        <junit.jupiter.version>5.2.0</junit.jupiter.version>
         <javax.json.version>1.1.2</javax.json.version>
+        <jacoco.version>0.8.1</jacoco.version>
     </properties>
 
     <build>
@@ -86,7 +88,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
+                <version>${maven.surefire.version}</version>
                 <configuration>
                     <includes>
                         <include>**/Test*.java</include>
@@ -111,7 +113,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.0</version>
+                <version>${jacoco.version}</version>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>

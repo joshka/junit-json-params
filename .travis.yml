@@ -6,5 +6,7 @@ deploy:
   file:
     - target/junit-javax.json-$project_version-SNAPSHOT.jar
     - target/junit-javax.json-$project_version-SNAPSHOT-sources.jar
+  skip_cleanup: true
   on:
+    tags: true
     repo: joshka/junit-javax-json

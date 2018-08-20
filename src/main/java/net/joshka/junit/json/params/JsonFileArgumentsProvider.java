@@ -21,11 +21,11 @@ public class JsonFileArgumentsProvider implements AnnotationConsumer<JsonFileSou
 
     private String[] resources;
 
-    public JsonFileArgumentsProvider() {
+    JsonFileArgumentsProvider() {
         this(Class::getResourceAsStream);
     }
 
-    public JsonFileArgumentsProvider(BiFunction<Class<?>, String, InputStream> inputStreamProvider) {
+    JsonFileArgumentsProvider(BiFunction<Class<?>, String, InputStream> inputStreamProvider) {
         this.inputStreamProvider = inputStreamProvider;
     }
 

@@ -1,11 +1,14 @@
 # junit-json-params
 
 A [Junit 5](http://junit.org/junit5/) library to provide a `@JsonFileSource`
-annotation to load data from JSON files in parameterized tests.
+annotation that loads data from JSON files in parameterized tests.
 
 ## Project Info
-[Javadocs](http://www.joshka.net/junit-json-params/apidocs/index.html)
-[![Build Status](https://travis-ci.org/joshka/junit-json-params.svg?branch=master)](https://travis-ci.org/joshka/junit-json-params)
+Project site: http://www.joshka.net/junit-json-params
+
+Javadocs: http://www.joshka.net/junit-json-params/apidocs/index.html
+
+Build Status: [![Build Status](https://travis-ci.org/joshka/junit-json-params.svg?branch=master)](https://travis-ci.org/joshka/junit-json-params)
 
 ## Maven Coordinates
 ```xml

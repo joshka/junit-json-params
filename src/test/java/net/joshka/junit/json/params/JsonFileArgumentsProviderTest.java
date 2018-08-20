@@ -1,4 +1,4 @@
-package net.joshka.junit.javax.json;
+package net.joshka.junit.json.params;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package net.joshka.junit.javax.json;
+package net.joshka.junit.json.params;
 
 import org.junit.jupiter.params.provider.ArgumentsSource;
 

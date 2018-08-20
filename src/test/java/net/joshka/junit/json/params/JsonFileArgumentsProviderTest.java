@@ -74,7 +74,7 @@ class JsonFileArgumentsProviderTest {
     @Test
     @DisplayName("missing resource throws exception")
     void missingResource() {
-        BiFunction<Class<?>, String, InputStream> inputStreamProvider = (aClass, resource) -> null;
+        BiFunction<Class, String, InputStream> inputStreamProvider = (aClass, resource) -> null;
         ExtensionContext context = mock(ExtensionContext.class);
         JsonFileSource source = mock(JsonFileSource.class);
         when(source.resources()).thenReturn(new String[]{"not-found.json"});

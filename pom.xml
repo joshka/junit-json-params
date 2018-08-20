@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.joshka</groupId>
-    <artifactId>junit-javax.json</artifactId>
+    <artifactId>junit-json-params</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A Junit 5 library to load data from JSON files in parameterized tests</description>
-    <url>http://www.joshka.net/junit-javax-json/</url>
+    <url>http://www.joshka.net/junit-json-params/</url>
     <inceptionYear>2018</inceptionYear>
     <licenses>
         <license>
@@ -31,14 +31,14 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/joshka/junit-javax-json.git</connection>
-        <developerConnection>scm:git:https://github.com/joshka/junit-javax-json.git</developerConnection>
-        <url>https://github.com/joshka/junit-javax-json/</url>
+        <connection>scm:git:https://github.com/joshka/junit-json-params.git</connection>
+        <developerConnection>scm:git:https://github.com/joshka/junit-json-params.git</developerConnection>
+        <url>https://github.com/joshka/junit-json-params/</url>
         <tag>HEAD</tag>
     </scm>
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/joshka/junit-javax-json/issues</url>
+        <url>https://github.com/joshka/junit-json-params/issues</url>
     </issueManagement>
 
     <distributionManagement>

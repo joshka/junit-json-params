@@ -9,4 +9,4 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    repo: joshka/junit-javax-json
+    repo: joshka/junit-json-params

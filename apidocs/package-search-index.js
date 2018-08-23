@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"net.joshka.junit.javax.json"}]
+packageSearchIndex = [{"l":"net.joshka.junit.json.params"}]

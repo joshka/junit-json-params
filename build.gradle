@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'net.joshka'
+version = '0.0.1-SNAPSHOT'
+
+description = """net.joshka:junit-json-params"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+repositories {
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+dependencies {
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version:'5.3.0-RC1'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version:'5.3.0-RC1'
+    compile group: 'javax.json', name: 'javax.json-api', version:'1.1.2'
+    compile group: 'org.jacoco', name: 'jacoco-maven-plugin', version:'0.8.0'
+    testCompile group: 'org.glassfish', name: 'javax.json', version:'1.1.2'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version:'5.3.0-RC1'
+    testCompile group: 'org.apiguardian', name: 'apiguardian-api', version:'1.0.0'
+    testCompile group: 'org.assertj', name: 'assertj-core', version:'3.9.0'
+    testCompile group: 'org.mockito', name: 'mockito-core', version:'2.13.0'
+}
+
+test {
+    useJUnitPlatform()
+}

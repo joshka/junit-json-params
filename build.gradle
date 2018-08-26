@@ -50,7 +50,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 
 javadoc {
     if(JavaVersion.current().isJava9Compatible()) {
-        options.addBooleanOption('html4', true)
+        options.addBooleanOption('html5', true)
     }
 }
 

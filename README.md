@@ -32,9 +32,9 @@ from the releases tab.
 ### `@JsonSource`
 `@JsonSource` allows you to specify argument lists as JSON strings.
 
-```java
-// see https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonArgumentsProviderTest.java
+See [`JsonArgumentsProviderTest`](https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonArgumentsProviderTest.java)
 
+```java
 import net.joshka.junit.json.params.JsonSource;
 
 /**
@@ -88,9 +88,9 @@ void arrayOfStrings(JsonString string) {
 `@JsonFileSource` lets you use JSON files from the classpath. It supports
 single objects and arrays of objects and JSON primitives (numbers and strings).
 
-```java
-// see https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonFileArgumentsProviderTest.java
+See [`JsonFileArgumentsProviderTest`](https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonFileArgumentsProviderTest.java)
 
+```java
 import net.joshka.junit.json.params.JsonFileSource;
 
 /**

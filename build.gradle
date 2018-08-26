@@ -1,3 +1,7 @@
+plugins {
+  id "org.sonarqube" version "2.6"
+}
+
 apply plugin: 'java-library'
 apply plugin: 'jacoco'
 apply plugin: 'maven-publish'

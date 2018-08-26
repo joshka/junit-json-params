@@ -4,18 +4,26 @@ A [Junit 5](http://junit.org/junit5/) library to provide annotations that load
 data from JSON Strings or files in parameterized tests.
 
 ## Project Info
-Project site: http://www.joshka.net/junit-json-params
+[Project site](http://www.joshka.net/junit-json-params)
 
-Javadocs: http://www.joshka.net/junit-json-params/apidocs/index.html
+[Javadocs](http://www.joshka.net/junit-json-params/apidocs/index.html)
 
-Build Status: [![Build Status](https://travis-ci.org/joshka/junit-json-params.svg?branch=master)](https://travis-ci.org/joshka/junit-json-params)
+[![Build Status](https://travis-ci.org/joshka/junit-json-params.svg?branch=master)](https://travis-ci.org/joshka/junit-json-params)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=alert_status)](https://sonarcloud.io/dashboard/index/net.joshka:junit-json-params)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=coverage)](https://sonarcloud.io/component_measures?id=net.joshka:junit-json-params&metric=coverage)
 
 ## Maven Coordinates
+Note: this is not yet published to maven central, but it
+[will be soon](https://github.com/joshka/junit-json-params/issues/1).
+Download the
+[latest release](https://github.com/joshka/junit-json-params/releases/latest)
+from the releases tab.
+
 ```xml
 <dependency>
     <groupId>net.joshka</groupId>
     <artifactId>junit-json-params</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -24,9 +32,9 @@ Build Status: [![Build Status](https://travis-ci.org/joshka/junit-json-params.sv
 ### `@JsonSource`
 `@JsonSource` allows you to specify argument lists as JSON strings.
 
-```java
-// see https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonArgumentsProviderTest.java
+See [`JsonArgumentsProviderTest`](https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonArgumentsProviderTest.java)
 
+```java
 import net.joshka.junit.json.params.JsonSource;
 
 /**
@@ -80,9 +88,9 @@ void arrayOfStrings(JsonString string) {
 `@JsonFileSource` lets you use JSON files from the classpath. It supports
 single objects and arrays of objects and JSON primitives (numbers and strings).
 
-```java
-// see https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonFileArgumentsProviderTest.java
+See [`JsonFileArgumentsProviderTest`](https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonFileArgumentsProviderTest.java)
 
+```java
 import net.joshka.junit.json.params.JsonFileSource;
 
 /**

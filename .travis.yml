@@ -16,10 +16,14 @@ cache:
   directories:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
+  - "$HOME/.sonar"
 addons:
   sonarcloud:
     organization: joshka-github
     token:
       secure: rWMeLInyK0o7C4iPbHZeMYy5mzL9fVVlripxSlRDFObKGEErdZiNyV/ZuTYIH+qu8Ai7218Cy5fhqzGKSSMsBMxFZjdJz3pVlZ3+Js4sfKQbu8zXSSPH5GGYZmJHADcj8HMy3W7Wliqx0HcUc8eqSNChgGUWqKWAtRjkzXp/GcwTTrRybwv8dTlI4mqo9y64dXhCmETI/4AJjN1JyOl5kCZg06lja6uk6xuYIDSZQDVD8Dff1r0Y/K5yAkfX6qp1sZmWaMT/iBDUJZCMnNhdkz/U/d5QDTXGIrTYcr2xzZ6thVQGO1TP8VzKx9p1aV/Q+vLriCq+Y4tjIjo6IY70t7A5108NoUrhiMZadVkXq4JkOupdB7ARFMx7W95iojfZwZmqq1qnfycaqMSQXJNFv0G4QXkN9FHs2UEnIt+/x8FpSsnMfqqYDjNh6igxi3/PBmkIX6RTc3zLx3eWQ8/imF92JMAPGhZZhxmQA+6R0lzn9cruZYpQKTzmAEDrDsHbzwwy4HdcbJ7CAmWgsL3FP5poRLtzUVfU5BqPKevihQ0WjintxPLh2AJOceve/JFNbsfylGhm/gtRuoGTqHqq0Eb9ZvJ8vgrFLtXHUVink+QNewYTfOSWy5OLUtsM4iERZTmuYH//GvLarXZo4ioWFdMUFF1rzpP/pjeUS+jIhFU=
+env:
+  global:
+    secure: EaKxSCJYTC5j2VSJtL8kGoF9zSi0tO7Xe/TI4usohh/4hTSezAywVcxSOxhJ976D/NKOCtxvN7WLgPbV+1xD6lJKqSF5cVGr5EvMOLE0rw2S/e52Fzm+B8ouBLhJ3oS8O4BKC19R34fn9MDqeyHK6zANhu8Fuz+G8E3W/8+HnidhZKezrTbY8jsRUZ2jaqQOdKzQdXJHCa0a0VKKNhM3DNEvxjrpbQ58FaO1iU/yqwSJfvSgx0GesYYt71zGPmIY0ZgNBgJaI2Uxjk539FIsT+4X5hJL892tQ76eT1Jv9sJVbN9PFRuxx/kfX2kIvtz7BwEN5JgD8jmuKz+CO4mjENlv6uFs/kVJnVh145dGvsYio7qhEvWIjAo9F5Qa9rMZpsWWfuG1HF46vkq0g4KylhAEdvLZ7js2wi4O/3L/JxV5WQJQe647f3T8ertWc/3I19wpIWVVjQWFg8GoVCErBVgIFBEXx6BGaqsfrvZZuxAneW8BmXZU6euJvT90ao3czXgXyYP31sgP4k8f89iXNusmW7BpzHALiZIewqdSQ7mXf+ofTS5oii2XdvZSIm0So4Pf877QQF+I5Xy+RvkfIWKD8EILb7Gev9RH9UF8VjRgjf7LI3c/a4crBghymQlJrcigQ0nMMyH8RSmPgniUOM/Qffkjf+XT4ALCQYNuhWc=
 script:
-  sonar-scanner
+- gradle sonarqube -Dsonar.login=$SONAR_LOGIN

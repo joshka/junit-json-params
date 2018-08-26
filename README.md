@@ -4,11 +4,13 @@ A [Junit 5](http://junit.org/junit5/) library to provide annotations that load
 data from JSON Strings or files in parameterized tests.
 
 ## Project Info
-Project site: http://www.joshka.net/junit-json-params
+[Project site](http://www.joshka.net/junit-json-params)
 
-Javadocs: http://www.joshka.net/junit-json-params/apidocs/index.html
+[Javadocs](http://www.joshka.net/junit-json-params/apidocs/index.html)
 
-Build Status: [![Build Status](https://travis-ci.org/joshka/junit-json-params.svg?branch=master)](https://travis-ci.org/joshka/junit-json-params)
+[![Build Status](https://travis-ci.org/joshka/junit-json-params.svg?branch=master)](https://travis-ci.org/joshka/junit-json-params)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=alert_status)](https://sonarcloud.io/dashboard/index/net.joshka:junit-json-params)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=coverage)](https://sonarcloud.io/component_measures?id=net.joshka:junit-json-params&metric=coverage)
 
 ## Maven Coordinates
 ```xml

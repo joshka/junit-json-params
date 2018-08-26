@@ -1,33 +1,101 @@
-apply plugin: 'java'
-apply plugin: 'maven'
+apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
 group = 'net.joshka'
 version = '0.0.1-SNAPSHOT'
+ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
 description = """net.joshka:junit-json-params"""
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
 }
 
 repositories {
-    maven { url "http://repo.maven.apache.org/maven2" }
+    mavenCentral()
 }
 
 dependencies {
-    compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version:'5.3.0-RC1'
-    compile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version:'5.3.0-RC1'
-    compile group: 'javax.json', name: 'javax.json-api', version:'1.1.2'
-    compile group: 'org.jacoco', name: 'jacoco-maven-plugin', version:'0.8.0'
-    testCompile group: 'org.glassfish', name: 'javax.json', version:'1.1.2'
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version:'5.3.0-RC1'
-    testCompile group: 'org.apiguardian', name: 'apiguardian-api', version:'1.0.0'
-    testCompile group: 'org.assertj', name: 'assertj-core', version:'3.9.0'
-    testCompile group: 'org.mockito', name: 'mockito-core', version:'2.13.0'
+    api group: 'org.junit.jupiter', name: 'junit-jupiter-api', version:'5.3.0-RC1'
+    api group: 'org.junit.jupiter', name: 'junit-jupiter-params', version:'5.3.0-RC1'
+    api group: 'javax.json', name: 'javax.json-api', version:'1.1.2'
+    testImplementation group: 'org.glassfish', name: 'javax.json', version:'1.1.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version:'5.3.0-RC1'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version:'3.9.0'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version:'2.13.0'
 }
 
 test {
     useJUnitPlatform()
+}
+
+task sourcesJar(type: Jar) {
+    classifier "sources"
+    from sourceSets.main.allJava
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier "javadoc"
+    from javadoc.destinationDir
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html4', true)
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            pom {
+                name = 'JUnit JSON Params'
+                description = 'JUnit 5 JSON Parameterized Tests library'
+                url = 'http://www.joshka.net/junit-json-params/'
+                inceptionYear = '2018'
+                licenses {
+                    license {
+                        name = 'Apache License, Version 2.0'
+                        url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'joshka'
+                        name = 'Josh McKinney'
+                        url = 'http://www.joshka.net'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/joshka/junit-json-params.git'
+                    developerConnection = 'scm:git:https://github.com/joshka/junit-json-params.git'
+                    url = 'https://github.com/joshka/junit-json-params/'
+                }
+                issueManagement {
+                    system = 'Github'
+                    url = 'https://github.com/joshka/junit-json-params/issues'
+                }
+            }
+            repositories {
+                maven {
+                    def releasesRepoUrl = "$buildDir/repos/releases"
+                    def snapshotsRepoUrl = "$buildDir/repos/snapshots"
+                    url = isReleaseVersion ? releasesRepoUrl : snapshotsRepoUrl
+                }
+            }
+        }
+    }
+}
+
+signing {
+    required { isReleaseVersion && gradle.taskGraph.hasTask("uploadArchives") }
+    useGpgCmd()
+    sign publishing.publications.mavenJava
 }

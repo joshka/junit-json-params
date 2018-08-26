@@ -3,10 +3,8 @@ deploy:
   provider: releases
   api_key:
     secure: rKWZs+sS4JVE1aSlfc91h9gEtXYYjuA/am9W77QX9s0R4HQV6Pk7xxzFlX1/oq/KUTEr1mu3+vVwAStpBqgF5o1MBJvhT3/mY3geFmoPwnQAr/PzTCtbH5rxkIsYcKMgAPfz6qzhOb+w7ec2KUvH6vVTdkLhlooGYE7UIDMVutISylcNkRurViOALh8sckSbeB3C8J0fldnTTNNp0cJlbNtq/i7cyZaKy7BvXNAorsOlGxwZ8Vg3dh2orTD8GER3UKEcY9470l9nyvkLYlKYJC6GCPia3gjuhgl7+9k2yZH2tj8bHoYE4ZT1WoWgym33hILxQBmHInoc32squ5fwodt/PN10w4HRfikzAWMaHCFYeu1Oft6me+lJSwuKfqa2BHB6DvNIowZtPAE4mkgdT0Be9bsiS8d2bxofTpBxNLjZB9Ubw8JOhbk+2Jh3JNInby6w2dGFENQeSqsc9FVwdk+koSZylITGdkvhGE8YjwEsBumXwxQExluTJSOf1odV1j+ywr8v5Yt1nin2JPClGoygTlc4cPxiFyhvIh07SH6oxP6bJRAnVxSt32VzZbicQCdbqMb481Lohy5i81O2DHvsnAssp/80xhe4x2lBhcC/PP4jQFL2Swao5osgmfJ9FID7yM/rwtUsB1SLnQlG0f28sseZy9MZrNegvCGmgK4=
-  file:
-  - build/libs/junit-json-params-$project_version-SNAPSHOT.jar
-  - build/libs/junit-json-params-$project_version-SNAPSHOT-javadoc.jar
-  - build/libs/junit-json-params-$project_version-SNAPSHOT-sources.jar
+  file_glob: true
+  file: build/libs/*.jar
   skip_cleanup: true
   on:
     tags: true

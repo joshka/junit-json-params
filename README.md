@@ -23,7 +23,7 @@ from the releases tab.
 <dependency>
     <groupId>net.joshka</groupId>
     <artifactId>junit-json-params</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -81,6 +81,18 @@ void arrayOfNumbers(JsonNumber number) {
 @DisplayName("provides an array of strings")
 void arrayOfStrings(JsonString string) {
     assertThat(string.getString()).startsWith("value");
+}
+
+/**
+ * When passed <code>{'key':'value'}</code>, is executed a single time.
+ * This simplifies writing inline JSON strings
+ * @param object the parsed JsonObject
+ */
+@ParameterizedTest
+@JsonSource("{'key':'value'}")
+@DisplayName("handles simplified json")
+void simplifiedJson(JsonObject object) {
+    assertThat(object.getString("key")).isEqualTo("value");
 }
 ```
 

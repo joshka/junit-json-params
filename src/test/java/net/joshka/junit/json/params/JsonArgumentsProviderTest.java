@@ -7,9 +7,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import javax.json.JsonNumber;
 import javax.json.JsonObject;
 import javax.json.JsonString;
+import javax.json.stream.JsonParsingException;
+import java.lang.annotation.Annotation;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatCode;
+import static org.assertj.core.api.Assertions.*;
 
 class JsonArgumentsProviderTest {
 
@@ -71,5 +72,26 @@ class JsonArgumentsProviderTest {
     @DisplayName("handles simplified json")
     void simplifiedJson(JsonObject object) {
         assertThat(object.getString("key")).isEqualTo("value");
+    }
+
+    @DisplayName("handles invalid json")
+    @Test
+    void invalidJson() {
+        JsonSource invalidJsonSource = new JsonSource() {
+            @Override
+            public Class<? extends Annotation> annotationType() {
+                return JsonSource.class;
+            }
+
+            @Override
+            public String value() {
+                return "notJson";
+            }
+        };
+        JsonArgumentsProvider args = new JsonArgumentsProvider();
+        args.accept(invalidJsonSource);
+
+        assertThatExceptionOfType(JsonParsingException.class)
+                .isThrownBy(() -> args.provideArguments(null));
     }
 }

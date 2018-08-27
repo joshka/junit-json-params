@@ -19,8 +19,8 @@ public class JsonArgumentsProvider implements AnnotationConsumer<JsonSource>, Ar
     private String value;
 
     @Override
-    public void accept(JsonSource jsonFileSource) {
-        value = jsonFileSource.value();
+    public void accept(JsonSource jsonSource) {
+        value = jsonSource.value();
     }
 
     @Override

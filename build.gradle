@@ -88,12 +88,22 @@ publishing {
                     url = 'https://github.com/joshka/junit-json-params/issues'
                 }
             }
-            repositories {
-                maven {
-                    def releasesRepoUrl = "$buildDir/repos/releases"
-                    def snapshotsRepoUrl = "$buildDir/repos/snapshots"
-                    url = isReleaseVersion ? releasesRepoUrl : snapshotsRepoUrl
-                }
+        }
+    }
+    repositories {
+        maven {
+            def releasesRepoUrl = "$buildDir/repos/releases"
+            def snapshotsRepoUrl = "$buildDir/repos/snapshots"
+            url = isReleaseVersion ? releasesRepoUrl : snapshotsRepoUrl
+        }
+        maven {
+            name = 'OSSRH'
+            def releasesRepoUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+            def snapshotsRepoUrl = 'https://oss.sonatype.org/content/repositories/snapshots/'
+            url = isReleaseVersion ? releasesRepoUrl : snapshotsRepoUrl
+            credentials(PasswordCredentials) {
+                username = project.ossrhUsername
+                password = project.ossrhPassword
             }
         }
     }

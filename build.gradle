@@ -10,6 +10,7 @@ apply plugin: 'signing'
 group = 'net.joshka'
 version = '1.1.0'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
+ext.isRunningOnTravis = System.getenv("CI") == "true"
 
 description = """net.joshka:junit-json-params"""
 
@@ -102,8 +103,8 @@ publishing {
             def snapshotsRepoUrl = 'https://oss.sonatype.org/content/repositories/snapshots/'
             url = isReleaseVersion ? releasesRepoUrl : snapshotsRepoUrl
             credentials(PasswordCredentials) {
-                username = sonatypeUsername
-                password = sonatypePassword
+                username = isRunningOnTravis ? '' : sonatypeUsername
+                password = isRunningOnTravis ? '' : sonatypePassword
             }
         }
     }

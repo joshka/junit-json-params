@@ -65,4 +65,11 @@ class JsonArgumentsProviderTest {
     void arrayOfStrings(JsonString string) {
         assertThat(string.getString()).startsWith("value");
     }
+
+    @ParameterizedTest
+    @JsonSource("{'key':'value'}")
+    @DisplayName("handles simplified json")
+    void simplifiedJson(JsonObject object) {
+        assertThat(object.getString("key")).isEqualTo("value");
+    }
 }

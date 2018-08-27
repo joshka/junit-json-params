@@ -9,6 +9,8 @@ import javax.json.Json;
 import javax.json.JsonReader;
 import javax.json.JsonStructure;
 import javax.json.JsonValue;
+import javax.json.stream.JsonParsingException;
+import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 import java.util.stream.Stream;
@@ -23,6 +25,18 @@ public class JsonArgumentsProvider implements AnnotationConsumer<JsonSource>, Ar
 
     @Override
     public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext) throws Exception {
+        try {
+            return getArguments(value);
+        } catch (JsonParsingException e) {
+            // attempt to parse simplified json e.g. "{'key':value'}"
+            if (e.getMessage().contains("Unexpected char 39")) {
+                return getArguments(value.replace("'", "\""));
+            }
+            throw e;
+        }
+    }
+
+    private Stream<? extends Arguments> getArguments(String value) throws IOException {
         try (Reader reader = new StringReader(value)) {
             return values(reader).map(Arguments::of);
         }

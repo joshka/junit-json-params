@@ -12,19 +12,20 @@ data from JSON Strings or files in parameterized tests.
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=alert_status)](https://sonarcloud.io/dashboard/index/net.joshka:junit-json-params)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=coverage)](https://sonarcloud.io/component_measures?id=net.joshka:junit-json-params&metric=coverage)
 
-## Maven Coordinates
-Note: this is not yet published to maven central, but it
-[will be soon](https://github.com/joshka/junit-json-params/issues/1).
-Download the
-[latest release](https://github.com/joshka/junit-json-params/releases/latest)
-from the releases tab.
+## Installation
 
+### Apache Maven
 ```xml
 <dependency>
     <groupId>net.joshka</groupId>
     <artifactId>junit-json-params</artifactId>
     <version>1.1.0</version>
 </dependency>
+```
+
+### Gradle
+```groovy
+compile 'net.joshka:junit-json-params:1.1.0'
 ```
 
 ## Examples

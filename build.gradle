@@ -8,7 +8,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group = 'net.joshka'
-version = '1.0.0'
+version = '1.1.0'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
 description = """net.joshka:junit-json-params"""

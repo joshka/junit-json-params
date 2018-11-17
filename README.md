@@ -8,7 +8,7 @@ data from JSON Strings or files in parameterized tests.
 
 [![Build Status](https://travis-ci.org/joshka/junit-json-params.svg?branch=master)](https://travis-ci.org/joshka/junit-json-params)
 [![Maven Central](https://img.shields.io/maven-central/v/net.joshka/junit-json-params.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22net.joshka%22%20AND%20a:%22junit-json-params%22)
-[![Javadocs](http://javadoc.io/badge/net.joshka/junit-json-params.svg)](http://javadoc.io/doc/net.joshka/junit-json-params)
+[![Javadocs](https://javadoc.io/badge/net.joshka/junit-json-params.svg)](https://javadoc.io/doc/net.joshka/junit-json-params)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=alert_status)](https://sonarcloud.io/dashboard/index/net.joshka:junit-json-params)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=coverage)](https://sonarcloud.io/component_measures?id=net.joshka:junit-json-params&metric=coverage)
 [![License](https://img.shields.io/github/license/joshka/junit-json-params.svg)](blob/master/LICENSE.txt)

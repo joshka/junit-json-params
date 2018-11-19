@@ -12,6 +12,7 @@ data from JSON Strings or files in parameterized tests.
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=alert_status)](https://sonarcloud.io/dashboard/index/net.joshka:junit-json-params)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=coverage)](https://sonarcloud.io/component_measures?id=net.joshka:junit-json-params&metric=coverage)
 [![License](https://img.shields.io/github/license/joshka/junit-json-params.svg)](blob/master/LICENSE.txt)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=joshka/junit-json-params)](https://dependabot.com)
 
 ## Installation
 

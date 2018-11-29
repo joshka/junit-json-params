@@ -21,13 +21,13 @@ data from JSON Strings or files in parameterized tests.
 <dependency>
     <groupId>net.joshka</groupId>
     <artifactId>junit-json-params</artifactId>
-    <version>1.3.1-1</version>
+    <version>1.3.2</version>
 </dependency>
 ```
 
 ### Gradle
 ```groovy
-compile 'net.joshka:junit-json-params:1.3.1-1'
+compile 'net.joshka:junit-json-params:1.3.2'
 ```
 
 ## Examples

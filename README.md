@@ -161,4 +161,5 @@ class JsonFileArgumentsProviderTest {
 
 ## License
 Copyright 2018 Joshua McKinney
+
 Code is under the [Apache License 2.0](LICENSE.txt)

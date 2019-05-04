@@ -1,7 +1,7 @@
 plugins {
   id "org.sonarqube" version "2.7"
   id 'idea'
-  id "org.jetbrains.gradle.plugin.idea-ext" version "0.4.2"
+  id "org.jetbrains.gradle.plugin.idea-ext" version "0.5"
 }
 
 apply plugin: 'java-library'

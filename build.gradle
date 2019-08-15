@@ -11,7 +11,7 @@ apply plugin: 'signing'
 apply plugin: 'idea'
 
 group = 'net.joshka'
-version = '5.4.0-r0'
+version = '5.5.1-r0'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 ext.isRunningOnTravis = System.getenv("CI") == "true"
 

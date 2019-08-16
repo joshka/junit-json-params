@@ -21,13 +21,13 @@ data from JSON Strings or files in parameterized tests.
 <dependency>
     <groupId>net.joshka</groupId>
     <artifactId>junit-json-params</artifactId>
-    <version>5.4.2-r0</version>
+    <version>5.5.1-r0</version>
 </dependency>
 ```
 
 ### Gradle
 ```groovy
-compile 'net.joshka:junit-json-params:5.4.2-r0'
+compile 'net.joshka:junit-json-params:5.5.1-r0'
 ```
 
 ## Examples
@@ -51,7 +51,7 @@ class JsonArgumentsProviderTest {
     void singleObject(JsonObject object) {
         assertThat(object.getString("key")).isEqualTo("value");
     }
-    
+
     /**
      * When passed <code>[{"key":"value1"},{"key","value2"}]</code>, is
      * executed once per element of the array
@@ -63,7 +63,7 @@ class JsonArgumentsProviderTest {
     void arrayOfObjects(JsonObject object) {
         assertThat(object.getString("key")).startsWith("value");
     }
-    
+
     /**
      * When passed <code>[1, 2]</code>, is executed once per array element
      * @param number the parsed JsonNumber for each array element
@@ -74,7 +74,7 @@ class JsonArgumentsProviderTest {
     void arrayOfNumbers(JsonNumber number) {
         assertThat(number.intValue()).isGreaterThan(0);
     }
-    
+
     /**
      * When passed <code>["value1","value2"]</code>, is executed once per array
      * element
@@ -86,7 +86,7 @@ class JsonArgumentsProviderTest {
     void arrayOfStrings(JsonString string) {
         assertThat(string.getString()).startsWith("value");
     }
-    
+
     /**
      * When passed <code>{'key':'value'}</code>, is executed a single time.
      * This simplifies writing inline JSON strings
@@ -121,7 +121,7 @@ class JsonFileArgumentsProviderTest {
     void singleObject(JsonObject object) {
         assertThat(object.getString("key")).isEqualTo("value");
     }
-    
+
     /**
      * When passed <code>[{"key":"value1"},{"key","value2"}]</code>, is
      * executed once per element of the array
@@ -133,7 +133,7 @@ class JsonFileArgumentsProviderTest {
     void arrayOfObjects(JsonObject object) {
         assertThat(object.getString("key")).startsWith("value");
     }
-    
+
     /**
      * When passed <code>[1, 2]</code>, is executed once per array element
      * @param number the parsed JsonNumber for each array element
@@ -144,7 +144,7 @@ class JsonFileArgumentsProviderTest {
     void arrayOfNumbers(JsonNumber number) {
         assertThat(number.intValue()).isGreaterThan(0);
     }
-    
+
     /**
      * When passed <code>["value1","value2"]</code>, is executed once per array
      * element

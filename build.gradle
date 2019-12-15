@@ -9,7 +9,7 @@ plugins {
 }
 
 group = 'net.joshka'
-version = '5.5.1-r0'
+version = '5.5.2-r0'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 ext.isRunningOnTravis = System.getenv("CI") == "true"
 

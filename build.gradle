@@ -1,11 +1,12 @@
 plugins {
-  id 'java-library'
-  id 'jacoco'
-  id 'maven-publish'
-  id 'signing'
-  id 'idea'
-  id "org.sonarqube" version "2.8"
-  id "org.jetbrains.gradle.plugin.idea-ext" version "0.7"
+    id 'java-library'
+    id 'jacoco'
+    id 'maven-publish'
+    id 'signing'
+    id 'idea'
+    id "org.sonarqube" version "2.8"
+    id "org.jetbrains.gradle.plugin.idea-ext" version "0.7"
+    id 'io.codearte.nexus-staging' version '0.21.1'
 }
 
 group = 'net.joshka'
@@ -57,8 +58,6 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
-            artifact sourcesJar
-            artifact javadocJar
             pom {
                 name = 'JUnit JSON Params'
                 description = 'JUnit 5 JSON Parameterized Tests library'
@@ -121,4 +120,9 @@ idea.project.settings {
             javacAdditionalOptions "-parameters"
         }
     }
+}
+
+nexusStaging {
+    packageGroup 'net.joshka'
+    stagingProfileId '2751a733b7e537'
 }

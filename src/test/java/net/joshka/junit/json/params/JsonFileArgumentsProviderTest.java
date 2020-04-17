@@ -1,5 +1,8 @@
 package net.joshka.junit.json.params;
 
+import java.lang.reflect.Method;
+import java.util.List;
+import javax.json.JsonArray;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -71,13 +74,47 @@ class JsonFileArgumentsProviderTest {
         assertThat(string.getString()).startsWith("value");
     }
 
+    /**
+     * When passed <code>[{"key":"value1"},{"key","value2"}]</code>
+     * and argument is a JsonArray, test is executed only once.
+     * @param object the parsed JsonArray object
+     */
+    @ParameterizedTest
+    @JsonFileSource(resources = "/array-of-objects.json")
+    void jsonArray(JsonArray object) {
+        assertThat(object).hasSize(2);
+    }
+
+    /**
+     * When passed <code>[{"key":"value1"},{"key","value2"}]</code>
+     * and argument is a List, test is executed only once.
+     * @param object the parsed List object
+     */
+    @ParameterizedTest
+    @JsonFileSource(resources = "/array-of-objects.json")
+    void listJsonObject(List<JsonObject> object) {
+        assertThat(object).hasSize(2);
+    }
+
+    /**
+     * When passed <code>[{"key":"value1"},{"key","value2"}]</code>
+     * and argument is a List, test is executed only once.
+     * @param object the parsed List object
+     */
+    @ParameterizedTest
+    @JsonFileSource(resources = "/array-of-objects.json")
+    void listString(List<String> object) {
+        assertThat(object).hasSize(2);
+    }
+
     @Test
     @DisplayName("missing resource throws exception")
-    void missingResource() {
+    void missingResource() throws Exception {
         BiFunction<Class, String, InputStream> inputStreamProvider = (aClass, resource) -> null;
         ExtensionContext context = mock(ExtensionContext.class);
         JsonFileSource source = mock(JsonFileSource.class);
         when(source.resources()).thenReturn(new String[]{"not-found.json"});
+        when(context.getRequiredTestMethod()).thenReturn(this.getClass().getDeclaredMethod("missingResource"));
         JsonFileArgumentsProvider provider = new JsonFileArgumentsProvider(inputStreamProvider);
         provider.accept(source);
 

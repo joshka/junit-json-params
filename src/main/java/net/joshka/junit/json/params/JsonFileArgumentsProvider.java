@@ -1,5 +1,10 @@
 package net.joshka.junit.json.params;
 
+import static java.util.Arrays.stream;
+
+import java.util.Collection;
+import java.util.List;
+import javax.json.JsonValue.ValueType;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
@@ -29,12 +34,9 @@ public class JsonFileArgumentsProvider implements AnnotationConsumer<JsonFileSou
         this.inputStreamProvider = inputStreamProvider;
     }
 
-    private static Stream<JsonValue> values(InputStream inputStream) {
+    private static JsonValue values(InputStream inputStream) {
         try (JsonReader reader = Json.createReader(inputStream)) {
-            JsonStructure structure = reader.read();
-            return structure.getValueType() == JsonValue.ValueType.ARRAY
-                    ? structure.asJsonArray().stream()
-                    : Stream.of(structure);
+            return reader.read();
         }
     }
 
@@ -45,10 +47,18 @@ public class JsonFileArgumentsProvider implements AnnotationConsumer<JsonFileSou
 
     @Override
     public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
-        return Arrays.stream(resources)
+        boolean isList = stream(context.getRequiredTestMethod().getParameterTypes())
+            .anyMatch(List.class::isAssignableFrom);
+        return stream(resources)
                 .map(resource -> openInputStream(context, resource))
-                .flatMap(JsonFileArgumentsProvider::values)
-                .map(Arguments::of);
+                .map(JsonFileArgumentsProvider::values)
+                .flatMap(json -> {
+                    if(json.getValueType() == ValueType.ARRAY && !isList){
+                        return json.asJsonArray().stream();
+                    }
+                    return Stream.of(json);
+                })
+            .map(Arguments::arguments);
     }
 
     private InputStream openInputStream(ExtensionContext context, String resource) {

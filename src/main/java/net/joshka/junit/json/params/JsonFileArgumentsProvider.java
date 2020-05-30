@@ -19,7 +19,7 @@ import static java.util.Arrays.stream;
 
 public class JsonFileArgumentsProvider implements AnnotationConsumer<JsonFileSource>, ArgumentsProvider {
 
-    private final BiFunction<Class, String, InputStream> inputStreamProvider;
+    private final BiFunction<Class<?>, String, InputStream> inputStreamProvider;
 
     private String[] resources;
 
@@ -27,7 +27,7 @@ public class JsonFileArgumentsProvider implements AnnotationConsumer<JsonFileSou
         this(Class::getResourceAsStream);
     }
 
-    JsonFileArgumentsProvider(BiFunction<Class, String, InputStream> inputStreamProvider) {
+    JsonFileArgumentsProvider(BiFunction<Class<?>, String, InputStream> inputStreamProvider) {
         this.inputStreamProvider = inputStreamProvider;
     }
 

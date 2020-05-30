@@ -1,10 +1,5 @@
 package net.joshka.junit.json.params;
 
-import static java.util.Arrays.stream;
-
-import java.util.Collection;
-import java.util.List;
-import javax.json.JsonValue.ValueType;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
@@ -13,12 +8,14 @@ import org.junit.platform.commons.util.Preconditions;
 
 import javax.json.Json;
 import javax.json.JsonReader;
-import javax.json.JsonStructure;
 import javax.json.JsonValue;
+import javax.json.JsonValue.ValueType;
 import java.io.InputStream;
-import java.util.Arrays;
+import java.util.List;
 import java.util.function.BiFunction;
 import java.util.stream.Stream;
+
+import static java.util.Arrays.stream;
 
 public class JsonFileArgumentsProvider implements AnnotationConsumer<JsonFileSource>, ArgumentsProvider {
 

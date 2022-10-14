@@ -1,6 +1,5 @@
 package net.joshka.junit.json.params;
 
-import java.lang.reflect.Method;
 import java.util.List;
 import javax.json.JsonArray;
 import org.junit.jupiter.api.DisplayName;

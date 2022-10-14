@@ -6,7 +6,7 @@ data from JSON Strings or files in parameterized tests.
 ## Project Info
 [Project site](http://www.joshka.net/junit-json-params)
 
-[![Build Status](https://travis-ci.org/joshka/junit-json-params.svg?branch=master)](https://travis-ci.org/joshka/junit-json-params)
+[![Build Status](https://app.travis-ci.com/joshka/junit-json-params.svg?branch=master)](https://app.travis-ci.com/joshka/junit-json-params)
 [![Maven Central](https://img.shields.io/maven-central/v/net.joshka/junit-json-params.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22net.joshka%22%20AND%20a:%22junit-json-params%22)
 [![Javadocs](https://javadoc.io/badge/net.joshka/junit-json-params.svg)](https://javadoc.io/doc/net.joshka/junit-json-params)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=alert_status)](https://sonarcloud.io/dashboard/index/net.joshka:junit-json-params)

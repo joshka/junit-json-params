@@ -4,6 +4,7 @@ A [Junit 5](http://junit.org/junit5/) library to provide annotations that load
 data from JSON Strings or files in parameterized tests.
 
 ## Project Info
+
 [Project site](http://www.joshka.net/junit-json-params)
 
 [![Build Status](https://app.travis-ci.com/joshka/junit-json-params.svg?branch=master)](https://app.travis-ci.com/joshka/junit-json-params)
@@ -17,22 +18,25 @@ data from JSON Strings or files in parameterized tests.
 ## Installation
 
 ### Apache Maven
+
 ```xml
 <dependency>
     <groupId>net.joshka</groupId>
     <artifactId>junit-json-params</artifactId>
-    <version>5.6.2-r1</version>
+    <version>5.9.1-r0</version>
 </dependency>
 ```
 
 ### Gradle
+
 ```groovy
-compile 'net.joshka:junit-json-params:5.6.2-r1'
+compile 'net.joshka:junit-json-params:5.9.1-r0'
 ```
 
 ## Examples
 
 ### `@JsonSource`
+
 `@JsonSource` allows you to specify argument lists as JSON strings.
 
 See [`JsonArgumentsProviderTest`](https://github.com/joshka/junit-json-params/blob/master/src/test/java/net/joshka/junit/json/params/JsonArgumentsProviderTest.java)
@@ -102,6 +106,7 @@ class JsonArgumentsProviderTest {
 ```
 
 ### `@JsonFileSource`
+
 `@JsonFileSource` lets you use JSON files from the classpath. It supports
 single objects and arrays of objects and JSON primitives (numbers and strings).
 
@@ -160,6 +165,7 @@ class JsonFileArgumentsProviderTest {
 ```
 
 ## License
-Copyright 2019 Joshua McKinney
+
+Copyright ©️ 2019-2022 Joshua McKinney
 
 Code is under the [Apache License 2.0](LICENSE.txt)

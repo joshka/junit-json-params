@@ -10,7 +10,7 @@ plugins {
 }
 
 group = 'net.joshka'
-version = '5.9.2-r0'
+version = '5.9.2-r1'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 ext.isRunningOnTravis = System.getenv("CI") == "true"
 
@@ -33,8 +33,8 @@ dependencies {
     api platform('org.junit:junit-bom:5.9.2')
     api 'org.junit.jupiter:junit-jupiter-api'
     api 'org.junit.jupiter:junit-jupiter-params'
-    api 'javax.json:javax.json-api:1.1.4'
-    testImplementation 'org.glassfish:javax.json:1.1.4'
+    api 'jakarta.json:jakarta.json-api:2.1.1'
+    testImplementation 'org.eclipse.parsson:parsson:1.1.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine'
     testImplementation 'org.assertj:assertj-core:3.24.2'
     testImplementation 'org.mockito:mockito-core:5.1.1'

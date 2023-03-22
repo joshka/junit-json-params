@@ -1,16 +1,16 @@
 package net.joshka.junit.json.params;
 
 import java.util.List;
-import javax.json.JsonArray;
+import jakarta.json.JsonArray;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.platform.commons.PreconditionViolationException;
 
-import javax.json.JsonNumber;
-import javax.json.JsonObject;
-import javax.json.JsonString;
+import jakarta.json.JsonNumber;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonString;
 import java.io.InputStream;
 import java.util.function.BiFunction;
 

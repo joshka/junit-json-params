@@ -4,7 +4,7 @@ import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
 import org.junit.jupiter.params.converter.ArgumentConverter;
 
-import javax.json.JsonObject;
+import jakarta.json.JsonObject;
 
 public class JsonConverter implements ArgumentConverter {
 

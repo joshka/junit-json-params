@@ -2,11 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [5.9.3-r0] - 2023-05-28
 
 ### Build Tasks
 
 - *(deps)* Bump org.sonarqube from 3.4.0.2513 to 3.5.0.2730 ([c330ce6](https://github.com/joshka/junit-json-params/commit/c330ce67a44d33b2e386bbad66742f0dac48ef20))
+
+### Documentation
+
+- *(changelog)* Init git-cliff and update changelog ([f2b3b50](https://github.com/joshka/junit-json-params/commit/f2b3b50d088710551abb5ddd901e91af6285b139))
 
 ## [5.9.2-r0] - 2023-01-31
 

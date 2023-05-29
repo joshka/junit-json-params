@@ -36,7 +36,7 @@ dependencies {
 
     // jakarta.json-api is not exposed on any public members, so does not need
     // to be exposed to use the library
-    implementation 'jakarta.json:jakarta.json-api:2.1.1'
+    implementation 'jakarta.json:jakarta.json-api:2.1.2'
 
     // this is the reference implementation of jakarta.json, a consumer of this
     // library needs to bring their own version (probably this)

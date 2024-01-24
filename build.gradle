@@ -42,7 +42,7 @@ dependencies {
     // library needs to bring their own version (probably this)
     testImplementation 'org.eclipse.parsson:parsson:1.1.5'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine'
-    testImplementation 'org.assertj:assertj-core:3.25.1'
+    testImplementation 'org.assertj:assertj-core:3.25.2'
     testImplementation 'org.mockito:mockito-core:5.9.0'
 }
 

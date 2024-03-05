@@ -16,9 +16,6 @@ ext.isRunningOnTravis = System.getenv("CI") == "true"
 
 description = """net.joshka:junit-json-params"""
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
     options.compilerArgs << '-parameters'
@@ -51,6 +48,8 @@ test {
 }
 
 java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
     withJavadocJar()
     withSourcesJar()
 }
@@ -132,4 +131,12 @@ idea.project.settings {
 nexusStaging {
     packageGroup 'net.joshka'
     stagingProfileId '2751a733b7e537'
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "joshka_junit-json-params"
+    property "sonar.organization", "joshka-github"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }

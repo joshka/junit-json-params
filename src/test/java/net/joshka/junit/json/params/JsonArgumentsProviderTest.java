@@ -52,7 +52,7 @@ class JsonArgumentsProviderTest {
     @JsonSource("[1,2]")
     @DisplayName("provides an array of numbers")
     void arrayOfNumbers(JsonNumber number) {
-        assertThat(number.intValue()).isGreaterThan(0);
+        assertThat(number.intValue()).isPositive();
     }
 
     /**

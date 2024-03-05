@@ -58,7 +58,7 @@ class JsonFileArgumentsProviderTest {
     @JsonFileSource(resources = "/array-of-numbers.json")
     @DisplayName("provides an array of numbers")
     void arrayOfNumbers(JsonNumber number) {
-        assertThat(number.intValue()).isGreaterThan(0);
+        assertThat(number.intValue()).isPositive();
     }
 
     /**

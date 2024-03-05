@@ -1,0 +1,11 @@
+line-length:
+  line_length: 100
+  heading_line_length: 100
+  code_block_line_length: 100
+  code_blocks: true
+  tables: true
+  headings: true
+  strict: false
+  stern: false
+no-duplicate-heading:
+  siblings_only: true

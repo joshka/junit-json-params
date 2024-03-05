@@ -24,15 +24,15 @@ body = """
     {% for commit in commits
     | filter(attribute="scope")
     | sort(attribute="scope") %}
-        - *({{commit.scope}})* {{ commit.message | upper_first | trim }} {% if commit.breaking %}[**breaking**] {% endif -%}
-        ([{{commit.id | truncate(length=7, end="")}}](https://github.com/joshka/junit-json-params/commit/{{commit.id}}))
+        - *({{commit.scope}})* {{ commit.message | upper_first | trim }}{% if commit.breaking %}[**breaking**] {% endif %}
+          ([{{commit.id | truncate(length=7, end="")}}](https://github.com/joshka/junit-json-params/commit/{{commit.id}}))
     {%- endfor -%}
     {% raw %}\n{% endraw %}\
     {%- for commit in commits %}
         {%- if commit.scope -%}
         {%- else -%}
-          - *(uncategorized)* {{ commit.message | upper_first | trim }} {% if commit.breaking %} [**breaking**] {% endif -%}
-          ([{{commit.id | truncate(length=7, end="")}}](https://github.com/joshka/junit-json-params/commit/{{commit.id}}))
+          - *(uncategorized)* {{ commit.message | upper_first | trim }}{% if commit.breaking %} [**breaking**] {% endif %}
+            ([{{commit.id | truncate(length=7, end="")}}](https://github.com/joshka/junit-json-params/commit/{{commit.id}}))
         {% endif -%}
     {% endfor -%}
 {% endfor %}\n
@@ -53,7 +53,7 @@ filter_unconventional = false
 split_commits = false
 # regex for preprocessing the commit messages
 commit_preprocessors = [
-  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "([#${2}](https://github.com/joshka/junit-json-params/issues/${2}))"}, # replace issue numbers
+  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "([#${2}](https://github.com/joshka/junit-json-params/issues/${2}))" }, # replace issue numbers
   { pattern = '(Bump .*)', replace = "build(deps): ${1}" },
 ]
 # regex for parsing and grouping commits

@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [5.10.2-r0] - 2024-03-05
 
 ### Bug Fixes
 
@@ -15,6 +15,11 @@ All notable changes to this project will be documented in this file.
 ([d2f9808](https://github.com/joshka/junit-json-params/commit/d2f98080fb42065d8bcc734003fd2efdb80ece34))
 - *(uncategorized)* Fix branch name to main
 ([612cc1b](https://github.com/joshka/junit-json-params/commit/612cc1b6c151d576ee69be5128da9b2864a96540))
+
+### Documentation
+
+- *(uncategorized)* Adjust changelog
+([9b1ac49](https://github.com/joshka/junit-json-params/commit/9b1ac498c04268454c2a4a834b830ff256826c12))
 
 ### Miscellaneous Tasks
 

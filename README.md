@@ -5,15 +5,12 @@ data from JSON Strings or files in parameterized tests.
 
 ## Project Info
 
-[Project site](http://www.joshka.net/junit-json-params)
-
-[![Build Status](https://app.travis-ci.com/joshka/junit-json-params.svg?branch=master)](https://app.travis-ci.com/joshka/junit-json-params)
-[![Maven Central](https://img.shields.io/maven-central/v/net.joshka/junit-json-params.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/net.joshka/junit-json-params)
-[![Javadocs](https://javadoc.io/badge/net.joshka/junit-json-params.svg)](https://javadoc.io/doc/net.joshka/junit-json-params)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=alert_status)](https://sonarcloud.io/dashboard/index/net.joshka:junit-json-params)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=net.joshka%3Ajunit-json-params&metric=coverage)](https://sonarcloud.io/component_measures?id=net.joshka:junit-json-params&metric=coverage)
-[![License](https://img.shields.io/github/license/joshka/junit-json-params.svg)](blob/master/LICENSE.txt)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=joshka/junit-json-params)](https://dependabot.com)
+[![Maven Central Version](https://img.shields.io/maven-central/v/net.joshka/junit-json-params?style=for-the-badge)](https://central.sonatype.com/artifact/net.joshka/junit-json-params)
+[![Javadocs](https://javadoc.io/badge/net.joshka/junit-json-params.svg?style=for-the-badge)](https://javadoc.io/doc/net.joshka/junit-json-params)
+[![GitHub License](https://img.shields.io/github/license/joshka/junit-json-params?style=for-the-badge)](./LICENSE.txt)  \
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/joshka/junit-json-params/gradle.yml?style=for-the-badge)](https://github.com/joshka/junit-json-params/actions/workflows/gradle.yml)
+[![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joshka_junit-json-params?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)](https://sonarcloud.io/project/overview?id=joshka_junit-json-params)
+[![Sonar Coverage](https://img.shields.io/sonar/coverage/joshka_junit-json-params?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)](https://sonarcloud.io/component_measures?id=joshka_junit-json-params&metric=coverage&view=list)
 
 ## Installation
 

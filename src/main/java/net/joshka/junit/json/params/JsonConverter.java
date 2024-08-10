@@ -61,7 +61,7 @@ public class JsonConverter implements ArgumentConverter {
         try {
             return objectMapper.readValue(jsonString, targetClass);
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "an exception was thrown");
+            logger.log(Level.SEVERE, "an exception was thrown", e);
         }
         return new ArgumentConversionException("Can't convert " + jsonString + " to " + targetClass.getName());
     }

@@ -10,4 +10,5 @@ import java.lang.annotation.*;
 @ArgumentsSource(JsonArgumentsProvider.class)
 public @interface JsonSource {
     String value();
+    Class<?> target() default Object.class;
 }

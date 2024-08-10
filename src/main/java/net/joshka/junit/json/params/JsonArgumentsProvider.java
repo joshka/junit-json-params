@@ -17,10 +17,14 @@ import java.util.stream.Stream;
 
 public class JsonArgumentsProvider implements AnnotationConsumer<JsonSource>, ArgumentsProvider {
     private String value;
+    private Class<?> targetClass;
+    private boolean isArrayClass;
 
     @Override
     public void accept(JsonSource jsonSource) {
         value = jsonSource.value();
+        targetClass = jsonSource.target();
+        isArrayClass = targetClass.isArray();
     }
 
     @Override
@@ -38,16 +42,24 @@ public class JsonArgumentsProvider implements AnnotationConsumer<JsonSource>, Ar
 
     private Stream<? extends Arguments> getArguments(String value) throws IOException {
         try (Reader reader = new StringReader(value)) {
-            return values(reader).map(Arguments::of);
+            if (this.targetClass.equals(Object.class)) {
+                return values(reader, this.isArrayClass)
+                        .map(Arguments::of);
+            }
+            return values(reader, this.isArrayClass)
+                    .map(json -> JsonConverter.convert(json, this.targetClass))
+                    .map(Arguments::of);
         }
     }
 
-    private static Stream<JsonValue> values(Reader reader) {
+    private static Stream<JsonValue> values(Reader reader, boolean arrayClass) {
         try (JsonReader jsonReader = Json.createReader(reader)) {
             JsonStructure structure = jsonReader.read();
-            return structure.getValueType() == JsonValue.ValueType.ARRAY
-                    ? structure.asJsonArray().stream()
-                    : Stream.of(structure);
+            Stream<JsonValue> values = Stream.of(structure);
+            if (structure.getValueType() == JsonValue.ValueType.ARRAY) {
+                values = arrayClass ? values : structure.asJsonArray().stream();
+            }
+            return values;
         }
     }
 }

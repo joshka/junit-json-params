@@ -9,7 +9,7 @@ import org.junit.platform.commons.util.Preconditions;
 import jakarta.json.Json;
 import jakarta.json.JsonReader;
 import jakarta.json.JsonValue;
-import jakarta.json.JsonValue.ValueType;
+
 import java.io.InputStream;
 import java.util.List;
 import java.util.function.BiFunction;
@@ -18,10 +18,10 @@ import java.util.stream.Stream;
 import static java.util.Arrays.stream;
 
 public class JsonFileArgumentsProvider implements AnnotationConsumer<JsonFileSource>, ArgumentsProvider {
-
     private final BiFunction<Class<?>, String, InputStream> inputStreamProvider;
-
     private String[] resources;
+    private Class<?> targetClass;
+    private boolean isArrayClass;
 
     JsonFileArgumentsProvider() {
         this(Class::getResourceAsStream);
@@ -40,22 +40,26 @@ public class JsonFileArgumentsProvider implements AnnotationConsumer<JsonFileSou
     @Override
     public void accept(JsonFileSource jsonFileSource) {
         resources = jsonFileSource.resources();
+        targetClass = jsonFileSource.target();
+        isArrayClass = targetClass.isArray();
     }
 
     @Override
     public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
         boolean isList = stream(context.getRequiredTestMethod().getParameterTypes())
-            .anyMatch(List.class::isAssignableFrom);
+                .anyMatch(List.class::isAssignableFrom);
         return stream(resources)
                 .map(resource -> openInputStream(context, resource))
                 .map(JsonFileArgumentsProvider::values)
                 .flatMap(json -> {
-                    if(json.getValueType() == ValueType.ARRAY && !isList){
-                        return json.asJsonArray().stream();
+                    if(json.getValueType() == JsonValue.ValueType.ARRAY && !isList && !isArrayClass) {
+                        return json.asJsonArray().stream()
+                                .map(obj -> JsonConverter.convert(obj, this.targetClass));
                     }
-                    return Stream.of(json);
+                    return Stream.of(json)
+                            .map(obj -> JsonConverter.convert(obj, this.targetClass));
                 })
-            .map(Arguments::arguments);
+                .map(Arguments::arguments);
     }
 
     private InputStream openInputStream(ExtensionContext context, String resource) {

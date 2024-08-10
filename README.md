@@ -1,7 +1,7 @@
 # junit-json-params
 
 A [Junit 5](http://junit.org/junit5/) library to provide annotations that load
-data from JSON Strings or files in parameterized tests.
+singleObject from JSON Strings or files in parameterized tests.
 
 ## Project Info
 

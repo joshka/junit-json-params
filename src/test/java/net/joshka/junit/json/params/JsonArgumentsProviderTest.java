@@ -1,12 +1,10 @@
 package net.joshka.junit.json.params;
 
+import net.joshka.junit.json.params.data.TestObject;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 
-import jakarta.json.JsonNumber;
-import jakarta.json.JsonObject;
-import jakarta.json.JsonString;
 import jakarta.json.stream.JsonParsingException;
 import java.lang.annotation.Annotation;
 
@@ -23,55 +21,55 @@ class JsonArgumentsProviderTest {
 
     /**
      * When passed <code>{"key":"value"}</code>, is executed a single time
-     * @param object the parsed JsonObject
+     * @param object the parsed object
      */
     @ParameterizedTest
-    @JsonSource("{\"key\":\"value\"}")
+    @JsonSource(value = "{\"key\":\"value\"}", target = TestObject.class)
     @DisplayName("provides a single object")
-    void singleObject(JsonObject object) {
-        assertThat(object.getString("key")).isEqualTo("value");
+    void singleObject(TestObject object) {
+        assertThat(object.getKey()).isEqualTo("value");
     }
 
     /**
      * When passed <code>[{"key":"value1"},{"key","value2"}]</code>, is
      * executed once per element of the array
-     * @param object the parsed JsonObject array element
+     * @param object the parsed object for each element in array
      */
     @ParameterizedTest
-    @JsonSource("[{\"key\":\"value1\"},{\"key\":\"value2\"}]")
+    @JsonSource(value = "[{\"key\":\"value1\"},{\"key\":\"value2\"}]", target = TestObject.class)
     @DisplayName("provides an array of objects")
-    void arrayOfObjects(JsonObject object) {
-        assertThat(object.getString("key")).startsWith("value");
+    void arrayOfObjects(TestObject object) {
+        assertThat(object.getKey()).startsWith("value");
     }
 
     /**
      * When passed <code>[1, 2]</code>, is executed once per array element
-     * @param number the parsed JsonNumber for each array element
+     * @param number the parsed Integer for each element in array
      */
     @ParameterizedTest
-    @JsonSource("[1,2]")
+    @JsonSource(value = "[1,2]", target = Integer.class)
     @DisplayName("provides an array of numbers")
-    void arrayOfNumbers(JsonNumber number) {
+    void arrayOfNumbers(Integer number) {
         assertThat(number.intValue()).isPositive();
     }
 
     /**
      * When passed <code>["value1","value2"]</code>, is executed once per array
      * element
-     * @param string the parsed JsonString for each array element
+     * @param string the parsed string for each element in array
      */
     @ParameterizedTest
-    @JsonSource("[\"value1\",\"value2\"]")
+    @JsonSource(value = "[\"value1\",\"value2\"]", target = String.class)
     @DisplayName("provides an array of strings")
-    void arrayOfStrings(JsonString string) {
-        assertThat(string.getString()).startsWith("value");
+    void arrayOfStrings(String string) {
+        assertThat(string).startsWith("value");
     }
 
     @ParameterizedTest
-    @JsonSource("{'key':'value'}")
+    @JsonSource(value = "{'key':'value'}", target = TestObject.class)
     @DisplayName("handles simplified json")
-    void simplifiedJson(JsonObject object) {
-        assertThat(object.getString("key")).isEqualTo("value");
+    void simplifiedJson(TestObject object) {
+        assertThat(object.getKey()).isEqualTo("value");
     }
 
     @DisplayName("handles invalid json")
@@ -87,6 +85,12 @@ class JsonArgumentsProviderTest {
             public String value() {
                 return "notJson";
             }
+
+            @Override
+            public Class<?> target() {
+                return Object.class;
+            }
+
         };
         JsonArgumentsProvider args = new JsonArgumentsProvider();
         args.accept(invalidJsonSource);

@@ -3,6 +3,15 @@
 A [Junit 5](http://junit.org/junit5/) library to provide annotations that load
 data from JSON Strings or files in parameterized tests.
 
+## Library status
+
+> [!CAUTION]
+>
+> I haven't actively written any Java in about 2 years, so this is in the barely maintained bucket
+> Please feel free to fork this it and release under a different namespace. I'm happy to slap a link
+> to a maintained fork on this repo to point at the new code, but I don't have the inclination to
+> maintain it myself.
+
 ## Project Info
 
 [![Maven Central Version](https://img.shields.io/maven-central/v/net.joshka/junit-json-params?style=for-the-badge)](https://central.sonatype.com/artifact/net.joshka/junit-json-params)

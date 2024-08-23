@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1aff72f4-12a8-442b-baee-33f242873c75" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonTempArgumentsProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/net/joshka/junit/json/params/JsonTempArgumentsProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonArgumentsProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonArgumentsProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonFileArgumentsProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonFileSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonFileSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/joshka/junit/json/params/JsonSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/joshka/junit/json/params/JsonArgumentsProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/joshka/junit/json/params/JsonArgumentsProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/joshka/junit/json/params/JsonArgumentsToValuesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/joshka/junit/json/params/JsonArgumentsToValuesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/joshka/junit/json/params/JsonFileArgumentsProviderTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JunitJsonParams" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JunitJsonParams" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2kQMhCFN6xRSLgBds5Ph6DjV5oq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.JsonArgumentsProviderTest.arrayOfNumbers.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.arrayOfObjects.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.arrayOfStrings.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.invalidJson.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.jsonArray.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.listJsonObject.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.listString.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.missingResource.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.simplifiedJson.executor": "Run",
+    "Gradle.JsonArgumentsProviderTest.singleObject.executor": "Run",
+    "Gradle.JsonArgumentsProviderTestHolder.singleObject.executor": "Run",
+    "Gradle.JsonArgumentsToValuesTest.booleans.executor": "Run",
+    "Gradle.JsonArgumentsToValuesTest.ints.executor": "Run",
+    "Gradle.JsonArgumentsToValuesTest.multipleObjects.executor": "Run",
+    "Gradle.JsonArgumentsToValuesTest.pojo.executor": "Run",
+    "Gradle.JsonArgumentsToValuesTest.strings.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.arrayOfNumbers.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.arrayOfObjects.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.arrayOfTestObject.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.defaultConstructor.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.jsonArray.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.listJsonObject.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.listString.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.listTestObject.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.missingResource.executor": "Run",
+    "Gradle.JsonFileArgumentsProviderTest.singleObject.executor": "Run",
+    "Gradle.JunitJsonParams [buildDependents].executor": "Run",
+    "Gradle.JunitJsonParams [build].executor": "Run",
+    "Gradle.JunitJsonParams [clean].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "temps",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Projects/Tasks",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Gradle.JsonArgumentsProviderTest.missingResource">
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="options" />
+      <option name="profiles" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JsonArgumentsProviderTest.arrayOfNumbers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.joshka.junit.json.params.JsonArgumentsProviderTest.arrayOfNumbers&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JsonArgumentsProviderTest.jsonArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.joshka.junit.json.params.JsonArgumentsProviderTest.jsonArray&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JsonArgumentsProviderTest.listJsonObject" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.joshka.junit.json.params.JsonArgumentsProviderTest.listJsonObject&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JsonArgumentsProviderTest.listString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.joshka.junit.json.params.JsonArgumentsProviderTest.listString&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JsonArgumentsProviderTest.missingResource" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.joshka.junit.json.params.JsonArgumentsProviderTest.missingResource&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="JunitJsonParams" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="JunitJsonParams" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.JsonArgumentsProviderTest.missingResource" />
+        <item itemvalue="Gradle.JsonArgumentsProviderTest.jsonArray" />
+        <item itemvalue="Gradle.JsonArgumentsProviderTest.listString" />
+        <item itemvalue="Gradle.JsonArgumentsProviderTest.listJsonObject" />
+        <item itemvalue="Gradle.JsonArgumentsProviderTest.arrayOfNumbers" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1aff72f4-12a8-442b-baee-33f242873c75" name="Changes" comment="" />
+      <created>1723211463868</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723211463868</updated>
+      <workItem from="1723211464900" duration="25898000" />
+      <workItem from="1723476535994" duration="7984000" />
+      <workItem from="1723556939569" duration="2273000" />
+      <workItem from="1723651279326" duration="3369000" />
+      <workItem from="1723877169803" duration="1930000" />
+      <workItem from="1724154594120" duration="15035000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

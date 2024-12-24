@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    api platform('org.junit:junit-bom:5.11.3')
+    api platform('org.junit:junit-bom:5.11.4')
     api 'org.junit.jupiter:junit-jupiter-api'
     api 'org.junit.jupiter:junit-jupiter-params'
 
@@ -39,7 +39,7 @@ dependencies {
     // library needs to bring their own version (probably this)
     testImplementation 'org.eclipse.parsson:parsson:1.1.7'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine'
-    testImplementation 'org.assertj:assertj-core:3.26.3'
+    testImplementation 'org.assertj:assertj-core:3.27.0'
     testImplementation 'org.mockito:mockito-core:5.14.2'
 }
 
